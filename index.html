@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+  <main class="container">
+    <section class="sidebar">
+        <!-- Sidebar start -->
+    <div class="your-info">
+      <div class="step-number"></div>
+      <div class="step-name">
+        <p>Step 1</p>
+        <h3>Your info</h3> 
+      </div>   
+    </div>
+    <div class="your-info">
+      <div class="step-number"></div>
+      <div class="step-name">
+        <p>Step 2</p>
+        <h3>Select plan</h3> 
+      </div>   
+    </div>
+    <div class="your-info">
+      <div class="step-number"></div>
+      <div class="step-name">
+        <p>Step 3</p>
+        <h3>Add-ons</h3> 
+      </div>   
+    </div>
+    <div class="your-info">
+      <div class="step-number"></div>
+      <div class="step-name">
+        <p>Step 4</p>
+        <h3>Summary</h3> 
+      </div>   
+    </div>
+        <!-- Sidebar end -->
+  </section>
+  <section class="steps">
+        <!-- Step 1 start -->
+    <div class="step-one">
+      <h2>Personal info</h2>
+      <p>Please provide your name, email address, and phone number.</p>
+
+      <lable>Name
+        <input type="text" placeholder="e.g. Stephen King">
+      </lable>
+      <lable>Email Address
+        <input type="text" placeholder="e.g. stephenking@lorem.com">
+      </lable>
+      <lable>Phone Number
+        <input type="text" placeholder="e.g. +1 234 567 890">
+      </lable>
+      <div class="back-next-confirm">
+        <button>Next Step</button>
+      </div>
+    </div>
+        <!-- Step 1 end -->
+        <!-- Step 2 start -->
+    <div class="step-two">
+      <h2>Select your plan</h2>
+      <p>You have the option of monthly or yearly billing.</p>
+      <div class="options">
+        <div class="arcade">
+          <p>Arcade</p>
+          <span>$9/mo</span>
+        </div>
+        <div class="advanced">
+          <p>Advanced</p>
+          <span>$12/mo</span>
+        </div>
+        <div class="pro">
+          <p>Pro</p>
+          <span>$15/mo</span>
+        </div>
+      </div>
+      <div class="billing">
+        <p>Monthly</p>
+        <div class="toggle">
+          <input type="checkbox">
+        </div>
+        <p>Yearly</p>
+      </div>
+      <div class="back-next-confirm">
+        <button>Go Back</button>
+        <button>Next Step</button>
+      </div>
+    </div>
+        <!-- Step 2 end -->
+        <!-- Step 3 start -->
+    <div class="step-three">
+      <h2>Pick add-ons</h2>
+      <p>Add-ons help enhance your gaming experience.</p>
+      <div class="online-service">
+        Online service
+        Access to multiplayer games
+        +$1/mo
+      </div>
+      <div class="larger-storage">
+        Larger storage
+        Extra 1TB of cloud save
+        +$2/mo
+      </div>
+      <div class="customizable-profile">
+        Customizable Profile
+        Custom theme on your profile
+        +$2/mo
+      </div>
+      <div class="back-next-confirm">
+        <button>Go Back</button>
+        <button>Next Step</button>
+      </div>
+    </div>
+        <!-- Step 3 end -->
+        <!-- Step 4 start -->
+    <div class="step-four">
+      <h2>Finishing up</h2>
+      <p>Double-check everything looks OK before confirming.</p>
+
+      <!-- Dynamically add subscription and add-on selections here -->
+
+      Total (per month/year)
+
+      <div class="back-next-confirm">
+        <button>Go Back</button>
+        <button>Confirm</button>
+      </div>
+    </div>
+        <!-- Step 4 end -->
+  </section>
+  <section class="thank-you">
+      <!-- Step 5 start -->
+      <h2>Thank you!</h2>
+      <p>
+        Thanks for confirming your subscription! We hope you have fun 
+        using our platform. If you ever need support, please feel free 
+        to email us at support@loremgaming.com.
+      </p>
+      <!-- Step 5 end -->
+  </section>
+  </main>
+</body>
+</html>
