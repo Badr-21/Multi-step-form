@@ -12,31 +12,31 @@
 </head>
 <body>
   <main class="container">
-    <section class="sidebar">
         <!-- Sidebar start -->
+    <section class="sidebar">
     <div class="your-info">
-      <div class="step-number"></div>
+      <div class="step-number">1</div>
       <div class="step-name">
         <p>Step 1</p>
         <h3>Your info</h3> 
       </div>   
     </div>
-    <div class="your-info">
-      <div class="step-number"></div>
+    <div class="select-plan">
+      <div class="step-number">2</div>
       <div class="step-name">
         <p>Step 2</p>
         <h3>Select plan</h3> 
       </div>   
     </div>
-    <div class="your-info">
-      <div class="step-number"></div>
+    <div class="add-on">
+      <div class="step-number">3</div>
       <div class="step-name">
         <p>Step 3</p>
         <h3>Add-ons</h3> 
       </div>   
     </div>
-    <div class="your-info">
-      <div class="step-number"></div>
+    <div class="summary">
+      <div class="step-number">4</div>
       <div class="step-name">
         <p>Step 4</p>
         <h3>Summary</h3> 
@@ -46,26 +46,28 @@
   </section>
   <section class="steps">
         <!-- Step 1 start -->
-    <div class="step-one">
+    <div class="step step-one">
       <h2>Personal info</h2>
       <p>Please provide your name, email address, and phone number.</p>
-
-      <lable>Name
-        <input type="text" placeholder="e.g. Stephen King">
-      </lable>
-      <lable>Email Address
-        <input type="text" placeholder="e.g. stephenking@lorem.com">
-      </lable>
-      <lable>Phone Number
-        <input type="text" placeholder="e.g. +1 234 567 890">
-      </lable>
+      <div class="name">
+        <label for="name">Name</label><br/>
+        <input id="name" type="text" name="name" placeholder="e.g. Stephen King">
+      </div>
+      <div class="email">
+        <label>Email Address</label><br/>
+        <input id="email" type="text" name="email" placeholder="e.g. stephenking@lorem.com">
+      </div>
+      <div class="phone-number">
+        <label>Phone Number</label><br/>
+        <input id="phone" type="text" name="phone" placeholder="e.g. +1 234 567 890">
+      </div>
       <div class="back-next-confirm">
-        <button>Next Step</button>
+        <button class="next">Next Step</button>
       </div>
     </div>
         <!-- Step 1 end -->
         <!-- Step 2 start -->
-    <div class="step-two">
+    <div class="step step-two">
       <h2>Select your plan</h2>
       <p>You have the option of monthly or yearly billing.</p>
       <div class="options">
@@ -91,12 +93,12 @@
       </div>
       <div class="back-next-confirm">
         <button>Go Back</button>
-        <button>Next Step</button>
+        <button class="next">Next Step</button>
       </div>
     </div>
         <!-- Step 2 end -->
         <!-- Step 3 start -->
-    <div class="step-three">
+    <div class="step step-three">
       <h2>Pick add-ons</h2>
       <p>Add-ons help enhance your gaming experience.</p>
       <div class="online-service">
@@ -116,12 +118,12 @@
       </div>
       <div class="back-next-confirm">
         <button>Go Back</button>
-        <button>Next Step</button>
+        <button class="next">Next Step</button>
       </div>
     </div>
         <!-- Step 3 end -->
         <!-- Step 4 start -->
-    <div class="step-four">
+    <div class="step step-four">
       <h2>Finishing up</h2>
       <p>Double-check everything looks OK before confirming.</p>
 

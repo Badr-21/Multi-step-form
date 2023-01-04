@@ -20,4 +20,114 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     width: 100vw;
+    height: 100vh;
+    background-color: var(--Magnolia);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .steps .step-two,
+.container .steps .step-three,
+.container .steps .step-four,
+.container .thank-you{
+    display: none
+}
+
+.container {
+    width: 57rem;
+    height: 34rem;
+    padding: 1rem 4.5rem 1rem 1rem;
+    background-color: var(--White);
+    border-radius: .5rem;
+    display: flex;
+}
+
+.container .sidebar {
+    width: 20rem;
+    padding: 2rem 2rem;
+    color: var(--White);
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+
+.container .sidebar > div {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.container .sidebar > div p {
+    font-size: .65rem;
+    text-transform: uppercase;
+    color: var(--Light-gray);
+    margin-bottom: .2rem;
+}
+
+.container .sidebar > div h3 {
+    font-size: .8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.container .sidebar > div .step-number {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .steps {
+    width: calc(100% - 23rem);
+    padding-top: 2rem;
+}
+
+.container .steps h2 {
+    font-size: 2rem;
+    color: var(--Marine-blue);
+    margin-bottom: .5rem;
+}
+
+.container .steps p {
+    color: var(--Cool-gray);
+    margin-bottom: 2rem;
+}
+
+.container .steps .step-one > div {
+    margin-bottom: 1rem;
+}
+
+.container .steps .step-one > div label {
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--Marine-blue);
+}
+
+.container .steps .step-one > div input {
+    width: 100%;
+    padding: .8rem;
+    margin-top: .5rem;
+    border-radius: .5rem;
+    outline: none;
+    border: 1px solid var(--Cool-gray)
+}
+
+.container .steps .step button.next {
+    padding: .8rem 1.5rem;
+    margin-top: 5rem;
+    color: var(--White);
+    font-weight: 500;
+    background-color: var(--Marine-blue);
+    border: none;
+    border-radius: .5rem;
+}
+
+
+.container .steps .step-one button.next {
+    float: right;
 }
