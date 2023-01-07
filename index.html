@@ -47,19 +47,23 @@
   <section class="steps">
         <!-- Step 1 start -->
     <div class="step step-one">
-      <h2>Personal info</h2>
-      <p>Please provide your name, email address, and phone number.</p>
-      <div class="name">
-        <label for="name">Name</label><br/>
-        <input id="name" type="text" name="name" placeholder="e.g. Stephen King">
+      <div class="step-heading">
+        <h2>Personal info</h2>
+        <p>Please provide your name, email address, and phone number.</p>
       </div>
-      <div class="email">
-        <label>Email Address</label><br/>
-        <input id="email" type="text" name="email" placeholder="e.g. stephenking@lorem.com">
-      </div>
-      <div class="phone-number">
-        <label>Phone Number</label><br/>
-        <input id="phone" type="text" name="phone" placeholder="e.g. +1 234 567 890">
+      <div class="input-infos">
+        <div class="name">
+          <label for="name">Name</label><br/>
+          <input id="name" type="text" name="name" placeholder="e.g. Stephen King">
+        </div>
+        <div class="email">
+          <label>Email Address</label><br/>
+          <input id="email" type="text" name="email" placeholder="e.g. stephenking@lorem.com">
+        </div>
+        <div class="phone-number">
+          <label>Phone Number</label><br/>
+          <input id="phone" type="text" name="phone" placeholder="e.g. +1 234 567 890">
+        </div>
       </div>
       <div class="back-next-confirm">
         <button class="next">Next Step</button>
@@ -68,32 +72,36 @@
         <!-- Step 1 end -->
         <!-- Step 2 start -->
     <div class="step step-two">
-      <h2>Select your plan</h2>
-      <p>You have the option of monthly or yearly billing.</p>
-      <div class="options">
-        <div class="arcade">
-          <img src="assets/images/icon-arcade.svg" alt="icon arcade">
-          <p>Arcade</p>
-          <span>$9/mo</span>
-        </div>
-        <div class="advanced">
-          <img src="assets/images/icon-advanced.svg" alt="icon advanced">
-          <p>Advanced</p>
-          <span>$12/mo</span>
-        </div>
-        <div class="pro">
-          <img src="assets/images/icon-pro.svg" alt="icon pro">
-          <p>Pro</p>
-          <span>$15/mo</span>
-        </div>
+      <div class="step-heading">
+        <h2>Select your plan</h2>
+        <p>You have the option of monthly or yearly billing.</p>
       </div>
-      <div class="billing">
-        <p>Monthly</p>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider"></span>
-        </label>
-        <p>Yearly</p>
+      <div class="payments">
+        <div class="options">
+          <div class="arcade">
+            <img src="assets/images/icon-arcade.svg" alt="icon arcade">
+            <p>Arcade</p>
+            <span>$9/mo</span>
+          </div>
+          <div class="advanced">
+            <img src="assets/images/icon-advanced.svg" alt="icon advanced">
+            <p>Advanced</p>
+            <span>$12/mo</span>
+          </div>
+          <div class="pro">
+            <img src="assets/images/icon-pro.svg" alt="icon pro">
+            <p>Pro</p>
+            <span>$15/mo</span>
+          </div>
+        </div>
+        <div class="billing">
+          <p>Monthly</p>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+          <p>Yearly</p>
+        </div>
       </div>
       <div class="back-next-confirm">
         <p class="go-back">Go Back</p>
@@ -103,22 +111,47 @@
         <!-- Step 2 end -->
         <!-- Step 3 start -->
     <div class="step step-three">
-      <h2>Pick add-ons</h2>
-      <p>Add-ons help enhance your gaming experience.</p>
-      <div class="online-service">
-        Online service
-        Access to multiplayer games
-        +$1/mo
+      <div class="step-heading">
+        <h2>Pick add-ons</h2>
+        <p>Add-ons help enhance your gaming experience.</p>
       </div>
-      <div class="larger-storage">
-        Larger storage
-        Extra 1TB of cloud save
-        +$2/mo
-      </div>
-      <div class="customizable-profile">
-        Customizable Profile
-        Custom theme on your profile
-        +$2/mo
+      <div class="services">
+        <div class="online-service">
+          <div class="checkbox">
+            <input type="checkbox">
+          </div>
+          <div class="service-option">
+            <div class="service-option-name">
+              <p>Online service</p>
+              <span>Access to multiplayer games</span>
+            </div>
+            <p class="plus-per-month">+$1/mo</p>
+          </div>
+        </div>
+        <div class="larger-storage">
+          <div class="checkbox">
+            <input type="checkbox">
+          </div>
+          <div class="service-option">
+            <div class="service-option-name">
+              <p>Larger storage</p>
+              <span>Extra 1TB of cloud save</span>
+            </div>
+            <p class="plus-per-month">+$2/mo</p>
+          </div>
+        </div>
+        <div class="customizable-profile">
+          <div class="checkbox">
+            <input type="checkbox">
+          </div>
+          <div class="service-option">
+            <div class="service-option-name">
+              <p>Customizable Profile</p>
+              <span>Custom theme on your profile</span>
+            </div>
+            <p class="plus-per-month">+$1/mo</p>
+          </div>
+        </div>
       </div>
       <div class="back-next-confirm">
         <p class="go-back">Go Back</p>
@@ -128,22 +161,25 @@
         <!-- Step 3 end -->
         <!-- Step 4 start -->
     <div class="step step-four">
-      <h2>Finishing up</h2>
-      <p>Double-check everything looks OK before confirming.</p>
+      <div class="step-heading">
+        <h2>Finishing up</h2>
+        <p>Double-check everything looks OK before confirming.</p>
+      </div>
 
       <!-- Dynamically add subscription and add-on selections here -->
 
       Total (per month/year)
 
       <div class="back-next-confirm">
-        <button>Go Back</button>
-        <button>Confirm</button>
+        <p class="go-back">Go Back</p>
+        <button class="confirm">Confirm</button>
       </div>
     </div>
-        <!-- Step 4 end -->
   </section>
-  <section class="thank-you">
+        <!-- Step 4 end -->
       <!-- Step 5 start -->
+  <section class="thank-you">
+    <img src="assets/images/icon-thank-you.svg" alt="icon thank you">
       <h2>Thank you!</h2>
       <p>
         Thanks for confirming your subscription! We hope you have fun 

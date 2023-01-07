@@ -33,6 +33,7 @@ body {
 .container .thank-you{
     display: none
 }
+/*/*/
 
 .container {
     width: 58rem;
@@ -87,28 +88,47 @@ body {
     padding: 2rem 0 0 2rem;
 }
 
-.container .steps .step > h2 {
+.container .steps .step {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .steps .step-one {
+    display: flex;
+}
+
+/* .container .steps .step-two,
+.container .steps .step-three,
+.container .steps .step-four {
+    display: none;
+}  */
+
+.container .steps .step .step-heading h2 {
     font-size: 2rem;
     color: var(--Marine-blue);
     margin-bottom: .5rem;
 }
 
-.container .steps .step > p {
+.container .steps .step .step-heading p {
     color: var(--Cool-gray);
-    margin-bottom: 2rem;
 }
 
-.container .steps .step-one > div {
-    margin-bottom: 1rem;
+.container .steps .step-one  .input-infos {
+    margin-top: -2rem;
 }
 
-.container .steps .step-one > div label {
+.container .steps .step-one  .input-infos > div {
+    margin-bottom: 1.5rem;
+}
+
+.container .steps .step-one .input-infos > div label {
     font-size: .8rem;
     font-weight: 500;
     color: var(--Marine-blue);
 }
 
-.container .steps .step-one > div input {
+.container .steps .step-one .input-infos > div input {
     width: 100%;
     padding: .8rem;
     margin-top: .5rem;
@@ -128,7 +148,6 @@ body {
 }
 
 .container .steps .step.step-one .back-next-confirm {
-    margin-top: 6rem;
     justify-content: flex-end;
 }
 
@@ -141,45 +160,48 @@ body {
     border-radius: .5rem;
 }
 
-/* .container .steps .step-one {
-    display: none;
-}
-
-.container .steps .step-two {
-    display: block;
+/* .container .steps .step-one,
+.container .steps .step-three,
+.container .steps .step-four,
+.container .thank-you{
+    display: none
 } */
 
-.container .steps .step-two .options {
+.container .steps .step-two {
+    display: flex;
+} 
+
+.container .steps .step-two .payments .options {
     display: flex;
     margin-bottom: 2rem;
     column-gap: 1rem;
 }
 
 
-.container .steps .step-two .options > div {
+.container .steps .step-two .payments .options > div {
     width: calc(100% - 2rem);
     padding: 1rem;
     border: 1px solid var(--Light-gray);
     border-radius: .5rem;
 }
 
-.container .steps .step-two .options > div img {
+.container .steps .step-two .payments .options > div img {
     margin-bottom: 3rem;
 }
 
-.container .steps .step-two .options > div p {
+.container .steps .step-two .payments .options > div p {
     margin-bottom: .2rem;
     font-weight: 500;
     color: var(--Marine-blue);
 }
 
-.container .steps .step-two .options > div span {
+.container .steps .step-two .payments .options > div span {
     font-weight: 400;
     font-size: .8rem;
     color: var(--Cool-gray);
 }
 
-.container .steps .step-two .billing {
+.container .steps .step-two .payments .billing {
     width: 100%;
     height: 3rem;
     font-size: .8rem;
@@ -193,7 +215,7 @@ body {
     column-gap: 1.5rem;
 }
 
-.container .steps .step-two .billing .switch {
+.container .steps .step-two .payments .billing .switch {
     display: inline-block;
     width: 2.1rem;
     height: 1.1rem;
@@ -202,15 +224,13 @@ body {
     position: relative;
 }
 
-.container .steps .step-two .billing .switch input {
+.container .steps .step-two .payments .billing .switch input {
     width: 0;
     height: 0;
     opacity: 0;
 }
 
-
-
-.container .steps .step-two .billing .switch .slider {
+.container .steps .step-two .payments .billing .switch .slider {
     content: "";
     position: absolute;
     width: .7rem;
@@ -225,7 +245,7 @@ body {
     transition: .3s;
 }
 
-.container .steps .step-two .billing .switch input:checked + .slider {
+.container .steps .step-two .payments .billing .switch input:checked + .slider {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 1.2rem;
@@ -238,14 +258,101 @@ body {
 .container .steps .step .back-next-confirm p {
     font-size: .9rem;
     font-weight: 700;
-    color: var(--Marine-blue);
+    color: var(--Cool-gray);
 }
 
-.container .steps .step-one,
+/* .container .steps .step-one,
 .container .steps .step-two {
     display: none;
 }
 
 .container .steps .step-three {
-    display: block;
+    display: flex;
+} */
+
+.container .steps .step-three .services {
+    margin-top: -2rem;
+}
+
+.container .steps .step-three .services > div {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    border: .1rem solid var(--Light-gray);;
+    border-radius: .5rem
+}
+
+.container .steps .step-three .services > div .checkbox {
+    width: 2rem;
+}
+
+.container .steps .step-three .services > div .service-option {
+    width: calc(100% - 2rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .steps .step-three .services > div .service-option .service-option-name p {
+    margin-bottom: .5rem;
+    font-weight: 700; 
+    color: var(--Marine-blue);
+}
+
+.container .steps .step-three .services > div .service-option .service-option-name span {
+    font-size: .8rem;
+    font-weight: 500; 
+    color: var(--Cool-gray);
+}
+
+.container .steps .step-three .services > div .service-option .plus-per-month {
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--Purplish-blue);
+}
+
+/* .container .steps .step-one,
+.container .steps .step-two, 
+.container .steps .step-three{
+    display: none;
+} */
+
+.container .steps .step-four {
+    display: flex;
+}
+.container .steps .step-four .back-next-confirm button.confirm {
+    padding: .8rem 1.5rem;
+    color: var(--White);
+    font-weight: 500;
+    background-color: var(--Purplish-blue);
+    border: none;
+    border-radius: .5rem;
+}
+
+.container .steps {
+    display: none;
+}
+
+.container .thank-you {
+    width: calc(100% - 19rem);
+    padding: 2rem 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .thank-you h2 {
+    font-size: 2rem;
+    color: var(--Marine-blue);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.container .thank-you p {
+    font-size: 1.1rem;
+    color: var(--Cool-gray);
+    text-align: center;
+    line-height: 1.4;
 }
