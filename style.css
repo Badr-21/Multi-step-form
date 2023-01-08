@@ -330,9 +330,9 @@ body {
     border-radius: .5rem;
 }
 
-.container .steps {
+/* .container .steps {
     display: none;
-}
+} */
 
 .container .thank-you {
     width: calc(100% - 19rem);
@@ -355,4 +355,16 @@ body {
     color: var(--Cool-gray);
     text-align: center;
     line-height: 1.4;
+}
+
+.container .thank-you,
+.container .steps .step-two,
+.container .steps .step-three,
+.container .steps .step-four {
+    display: none;
+}
+
+
+.container .steps .step-one {
+    display: flex;
 }
