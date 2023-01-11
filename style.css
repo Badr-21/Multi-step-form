@@ -58,14 +58,14 @@ body {
     margin-bottom: 2rem;
 }
 
-.container .sidebar > div p {
+.container .sidebar > div .step-name p {
     font-size: .65rem;
     text-transform: uppercase;
     color: var(--Light-gray);
     margin-bottom: .2rem;
 }
 
-.container .sidebar > div h3 {
+.container .sidebar > div .step-name h3 {
     font-size: .8rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -78,9 +78,16 @@ body {
     border-radius: 50%;
     border: 1px solid var(--White);
     font-size: .8rem;
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container .sidebar > div .step-number.active {
+    color: var(--Marine-blue);
+    background-color: var(--Light-blue);
+    border-color: var(--Light-blue);
 }
 
 .container .steps {
