@@ -129,19 +129,51 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.container .steps .step-one .input-infos > div label {
+.container .steps .step-one .input-infos > div  div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .steps .step-one .input-infos > div  div label {
     font-size: .8rem;
     font-weight: 500;
     color: var(--Marine-blue);
 }
 
-.container .steps .step-one .input-infos > div input {
+.container .steps .step-one .input-infos > div div p {
+    display: none;
+    text-align: right;
+    font-size: .9rem;
+    color: var(--Strawberry-red);
+}
+
+.container .steps .step-one .input-infos > div div p.required {
+    display: block;
+}
+
+.container .steps .step-one .input-infos > div  input {
     width: 100%;
     padding: .8rem;
     margin-top: .5rem;
     border-radius: .5rem;
     outline: none;
-    border: 1px solid var(--Cool-gray)
+    border: 1px solid var(--Cool-gray);
+    color: var(--Marine-blue);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container .steps .step-one .input-infos > div  input:focus {
+    border-color: var(--Marine-blue);
+}
+
+.container .steps .step-one .input-infos > div  input::placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.container .steps .step-one .input-infos > div input.error {
+    border-color: var(--Strawberry-red);
 }
 
 .container .steps .step .back-next-confirm {
