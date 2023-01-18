@@ -76,11 +76,10 @@ phoneInput.addEventListener('keydown', () => {
 
 
 let inputs =  Array.from(inputsStepOne)
-function validation() {
+function validationStepOne() {
     for(let i = 0; i < inputs.length; i++) {
-        if(inputs[i].classList.contains('error')) return false
-    } return true
-    
+        if(inputs[i].classList.contains('error')) return true
+    } 
 }
 
 function toNextStep(stepToDisplayNone, stepToDisplayFlex, stepActive, stepInactive) {
@@ -104,22 +103,55 @@ nextStepOne.addEventListener('click', () => {
                 inputs[i].previousElementSibling.lastElementChild.classList.add('required')
             }
         }return 
-    }else if(!validation()) return
+    }else { 
+        if(validationStepOne()) return
+    }
     toNextStep(stepOne, stepTwo, sideBarStepOne, sideBarStepTwo)
 })
 // end step one
 // start step two
 
+const options = document.querySelectorAll('.options > div')
+const twoMonthFree = document.querySelectorAll('.two-months-free');
+const toggle = document.querySelector('.toggle');
+const optionList = Array.from(options)
+
+options.forEach(option => {
+    option.addEventListener("click", () => {
+        if(option.classList.contains('active')) {
+            option.classList.remove('active')
+        }else {
+            for(let i = 0; i < optionList.length; i++) {
+                optionList[i].classList.remove('active')
+            }
+            option.classList.add('active')
+        }
+    })
+})
+
+toggle.addEventListener('click', () => {
+    if(toggle.checked) {
+        twoMonthFree.forEach(p => {
+            p.style.display = 'block'
+        })
+    }else {
+        twoMonthFree.forEach(p => {
+            p.style.display = 'none'
+        })
+    }
+    
+})
 
 
-goBackStepTwo.addEventListener('click', () => goBack(stepTwo, stepOne, sideBarStepTwo, sideBarStepOne))
-
+goBackStepTwo.addEventListener('click', () => {
+    goBack(stepTwo, stepOne, sideBarStepTwo, sideBarStepOne)
+})
 nextStepTwo.addEventListener('click', () =>  toNextStep(stepTwo, stepThree, sideBarStepTwo, sideBarStepThree))
+
 goBackStepThree.addEventListener('click', () => goBack(stepThree, stepTwo, sideBarStepThree, sideBarStepTwo))
-
 nextStepThree.addEventListener('click', () =>  toNextStep(stepThree, stepFour, sideBarStepThree, sideBarStepFour))
-goBackStepFour.addEventListener('click', () => goBack(stepFour, stepThree, sideBarStepFour, sideBarStepThree))
 
+goBackStepFour.addEventListener('click', () => goBack(stepFour, stepThree, sideBarStepFour, sideBarStepThree))
 confirm.addEventListener('click', () => {
     steps.style.display= 'none'
     thankYou.style.display = 'flex'

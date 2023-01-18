@@ -212,16 +212,22 @@ body {
 
 .container .steps .step-two .payments .options {
     display: flex;
-    margin-bottom: 2rem;
     column-gap: 1rem;
+    height: 12rem;
 }
 
 
 .container .steps .step-two .payments .options > div {
     width: calc(100% - 2rem);
+    height: max-content;
     padding: 1rem;
     border: 1px solid var(--Light-gray);
     border-radius: .5rem;
+}
+
+.container .steps .step-two .payments .options > div.active {
+    background-color: var(--Alabaster);
+    border-color: var(--Marine-blue);
 }
 
 .container .steps .step-two .payments .options > div img {
@@ -239,6 +245,14 @@ body {
     font-size: .8rem;
     color: var(--Cool-gray);
 }
+
+.container .steps .step-two .payments .options > div p.two-months-free {
+    display: none;
+    margin-top: .3rem;
+    font-weight: 700;
+    font-size: .7rem;
+    color: var(--Marine-blue);
+} 
 
 .container .steps .step-two .payments .billing {
     width: 100%;
@@ -397,14 +411,14 @@ body {
 }
 
 .container .thank-you,
-.container .steps .step-two,
+.container .steps .step-one,
 .container .steps .step-three,
 .container .steps .step-four {
     display: none;
 }
 
 
-.container .steps .step-one {
+.container .steps .step-two {
     display: flex;
 }
 
@@ -412,7 +426,12 @@ body {
 @media (hover: hover) {
     .container .steps .step-one .input-infos > div  input:hover,
     .container .steps .step .back-next-confirm button.next:hover,
-    .container .steps .step .back-next-confirm p:hover {
+    .container .steps .step .back-next-confirm p:hover,
+    .container .steps .step-two .payments .options > div:hover {
         cursor: pointer;
+    }
+
+    .container .steps .step-two .payments .options > div:hover {
+        border-color: var(--Marine-blue);
     }
 }
