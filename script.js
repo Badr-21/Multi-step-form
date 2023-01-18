@@ -19,52 +19,69 @@ const sideBarStepTwo = document.querySelector('.select-plan .step-number');
 const sideBarStepThree = document.querySelector('.add-on .step-number');
 const sideBarStepFour = document.querySelector('.summary .step-number');
 
+
+
+// start step one
 const inputsStepOne = document.querySelectorAll('.step-one input');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const phoneInput = document.querySelector('#phone');
 const pRequired = document.querySelector('#required');
-const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-const regexPhone = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g
-console.log(regexEmail.test('k@gmail.com'))
+const regexEmail = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+const regexPhone = /^[+]*(\d{1})[- ]?(\d{3})[- ]?(\d{3})[- ]?(\d{3})$/;
+// console.log(/^[+]*(\d{1})[- ]?(\d{3})[- ]?(\d{3})[- ]?(\d{3})$/.test('+2 166 523 455'))
 
 inputsStepOne.forEach(input => {
     input.addEventListener('focus', (e) => {
         if(e.target.value.length === 0) {
+            e.target.classList.add("error")
             e.target.previousElementSibling.lastElementChild.classList.add('required')
         }
     })
 })
 
-let nameValidate = nameInput.addEventListener('input', () => {
-    nameInput.previousElementSibling.lastElementChild.classList.remove('required')
-    return true
+nameInput.addEventListener('input', () => {
+    if(nameInput.value.length > 0) {
+        nameInput.classList.remove("error")
+        nameInput.previousElementSibling.lastElementChild.classList.remove('required')
+    }else if(nameInput.value.length === 0) {
+        nameInput.classList.add("error")
+        nameInput.previousElementSibling.lastElementChild.classList.add('required')
+    }
+    
 })
 
-let emailValidate = emailInput.addEventListener('input', () => {
+emailInput.addEventListener('input', () => {
     if(!regexEmail.test(emailInput.value)) {
-    emailInput.previousElementSibling.lastElementChild.classList.add('required')
-    emailInput.previousElementSibling.lastElementChild.textContent = 'Invalid email format'
+        emailInput.previousElementSibling.lastElementChild.classList.add('required')
+        emailInput.previousElementSibling.lastElementChild.textContent = 'Invalid email format'
+        emailInput.classList.add("error")
     }else {
         emailInput.previousElementSibling.lastElementChild.classList.remove('required')
-        return true
+        emailInput.classList.remove("error")
     }
+
 })
 
-let phoneValidate = phoneInput.addEventListener('input', () => {
+phoneInput.addEventListener('keydown', () => {
     if(!regexPhone.test(phoneInput.value)) {
-    phoneInput.previousElementSibling.lastElementChild.classList.add('required')
-    phoneInput.previousElementSibling.lastElementChild.textContent = 'Invalid phone format'
+        phoneInput.previousElementSibling.lastElementChild.classList.add('required')
+        phoneInput.previousElementSibling.lastElementChild.textContent = 'Invalid phone format'
+        phoneInput.classList.add("error")
     }else {
         phoneInput.previousElementSibling.lastElementChild.classList.remove('required')
-        return true
+        phoneInput.classList.remove("error")
     }
 })
 
 
-
-
-
+let inputs =  Array.from(inputsStepOne)
+function validation() {
+    for(let i = 0; i < inputs.length; i++) {
+        if(inputs[i].classList.contains('error')) return false
+    } return true
+    
+}
 
 function toNextStep(stepToDisplayNone, stepToDisplayFlex, stepActive, stepInactive) {
         stepToDisplayNone.style.display= 'none'
@@ -80,8 +97,21 @@ function goBack(stepToDisplayNone, stepToDisplayFlex, stepActive, stepInactive) 
 }
 
 nextStepOne.addEventListener('click', () => {
+    if(!nameInput.value || !emailInput || !phoneInput) {
+        for(let i = 0; i < inputs.length; i++) {
+            if(!inputs[i].classList.contains('error') && !inputs[i].value) {
+                inputs[i].classList.add("error")
+                inputs[i].previousElementSibling.lastElementChild.classList.add('required')
+            }
+        }return 
+    }else if(!validation()) return
     toNextStep(stepOne, stepTwo, sideBarStepOne, sideBarStepTwo)
 })
+// end step one
+// start step two
+
+
+
 goBackStepTwo.addEventListener('click', () => goBack(stepTwo, stepOne, sideBarStepTwo, sideBarStepOne))
 
 nextStepTwo.addEventListener('click', () =>  toNextStep(stepTwo, stepThree, sideBarStepTwo, sideBarStepThree))

@@ -407,3 +407,12 @@ body {
 .container .steps .step-one {
     display: flex;
 }
+
+
+@media (hover: hover) {
+    .container .steps .step-one .input-infos > div  input:hover,
+    .container .steps .step .back-next-confirm button.next:hover,
+    .container .steps .step .back-next-confirm p:hover {
+        cursor: pointer;
+    }
+}
