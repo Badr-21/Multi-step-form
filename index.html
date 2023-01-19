@@ -128,9 +128,9 @@
         <p>Add-ons help enhance your gaming experience.</p>
       </div>
       <div class="services">
-        <div class="online-service">
+        <div class="online-service active">
           <div class="checkbox">
-            <input type="checkbox">
+            <input type="checkbox" checked>
           </div>
           <div class="service-option">
             <div class="service-option-name">
@@ -140,9 +140,9 @@
             <p class="plus-per-month">+$1/mo</p>
           </div>
         </div>
-        <div class="larger-storage">
+        <div class="larger-storage active">
           <div class="checkbox">
-            <input type="checkbox">
+            <input type="checkbox" checked>
           </div>
           <div class="service-option">
             <div class="service-option-name">
@@ -177,10 +177,30 @@
         <h2>Finishing up</h2>
         <p>Double-check everything looks OK before confirming.</p>
       </div>
-
+      <div class="dynamic-sec">
+        <div class="option-choices">
+          <div class="option-choice-change">
+            <div class="option-choice">Arcade(Monthly)</div>
+            <p class="change">Change</p>
+          </div>
+          <div class="option-money">
+            <p>$<span>9</span>/<span></span class="mo-or-yr">mo</p>
+          </div>
+        </div>
+        <div class="services-choice">
+          <p>Online service</p>
+          <p>+$<span>1</span>/<span class="mo-or-yr">mo</span></p>
+        </div>
+        <div class="services-choice">
+          <p>Larger storage</p>
+          <p>+$<span>2</span>/<span class="mo-or-yr">mo</span></p>
+        </div>
+      </div>
       <!-- Dynamically add subscription and add-on selections here -->
-
-      Total (per month/year)
+      <div class="total">
+        <p>Total (per <span class="total-month-or-year">month</span>)</p>
+        <p>+$<span class="total-money">12</span>/<span class="mo-or-yr">mo</span></p>
+      </div>
 
       <div class="back-next-confirm">
         <p class="go-back" id="go-back-step-four">Go Back</p>

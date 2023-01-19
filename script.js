@@ -142,14 +142,45 @@ toggle.addEventListener('click', () => {
     
 })
 
-
-goBackStepTwo.addEventListener('click', () => {
-    goBack(stepTwo, stepOne, sideBarStepTwo, sideBarStepOne)
-})
+goBackStepTwo.addEventListener('click', () => goBack(stepTwo, stepOne, sideBarStepTwo, sideBarStepOne))
 nextStepTwo.addEventListener('click', () =>  toNextStep(stepTwo, stepThree, sideBarStepTwo, sideBarStepThree))
 
-goBackStepThree.addEventListener('click', () => goBack(stepThree, stepTwo, sideBarStepThree, sideBarStepTwo))
-nextStepThree.addEventListener('click', () =>  toNextStep(stepThree, stepFour, sideBarStepThree, sideBarStepFour))
+// end step two
+// start step three
+const services = document.querySelectorAll('.services > div');
+const checkboxes = document.querySelectorAll('[type="checkbox"]')
+
+services.forEach(service => {
+    service.addEventListener('click', () => {
+        if(!service.classList.contains('active')) {
+            service.classList.add('active')
+            service.firstElementChild.firstElementChild.setAttribute('checked', '')
+        }else {
+            service.classList.remove('active')
+            service.firstElementChild.firstElementChild.removeAttribute('checked')
+        }
+    })
+})
+
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('click', (e) => {
+        if(checkbox.checked) {
+            checkbox.parentElement.parentElement.classList.remove('active') 
+        }else {
+            checkbox.parentElement.parentElement.classList.add('active') 
+        }
+    })
+})
+
+goBackStepThree.addEventListener('click', () => {
+    goBack(stepThree, stepTwo, sideBarStepThree, sideBarStepTwo)
+})
+nextStepThree.addEventListener('click', () =>  {
+    toNextStep(stepThree, stepFour, sideBarStepThree, sideBarStepFour)
+})
+// end step three
+// start step four
+
 
 goBackStepFour.addEventListener('click', () => goBack(stepFour, stepThree, sideBarStepFour, sideBarStepThree))
 confirm.addEventListener('click', () => {

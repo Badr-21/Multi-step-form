@@ -336,8 +336,17 @@ body {
     border-radius: .5rem
 }
 
+.container .steps .step-three .services > div.active {
+    background-color: var(--Alabaster);
+    border-color: var(--Purplish-blue);
+}
+
 .container .steps .step-three .services > div .checkbox {
     width: 2rem;
+}
+
+.container .steps .step-three .services > div .checkbox input {
+    cursor:not-allowed;
 }
 
 .container .steps .step-three .services > div .service-option {
@@ -383,6 +392,42 @@ body {
     border-radius: .5rem;
 }
 
+.container .step-four .dynamic-sec {
+    padding: 1rem 1.2rem 0;
+    margin-top: -4rem;
+    background-color: var(--Magnolia);
+}
+
+.container .step-four .dynamic-sec .option-choices {
+    padding-bottom: 1.5rem;
+    border-bottom: .1rem solid var(--Light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .step-four .dynamic-sec .option-choice-change {
+    display: flex;
+    flex-direction: column;
+    row-gap: .4rem;
+}
+
+.container .step-four .dynamic-sec .option-choice-change .change {
+    text-decoration: underline;
+}
+
+.container .step-four .dynamic-sec .services-choice {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .step-four .total {
+    margin-top: -4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 /* .container .steps {
     display: none;
 } */
@@ -412,13 +457,13 @@ body {
 
 .container .thank-you,
 .container .steps .step-one,
-.container .steps .step-three,
-.container .steps .step-four {
+.container .steps .step-two,
+.container .steps .step-three {
     display: none;
 }
 
 
-.container .steps .step-two {
+.container .steps .step-four {
     display: flex;
 }
 
@@ -427,11 +472,16 @@ body {
     .container .steps .step-one .input-infos > div  input:hover,
     .container .steps .step .back-next-confirm button.next:hover,
     .container .steps .step .back-next-confirm p:hover,
-    .container .steps .step-two .payments .options > div:hover {
+    .container .steps .step-two .payments .options > div:hover,
+    .container .steps .step-three .services > div:hover {
         cursor: pointer;
     }
 
     .container .steps .step-two .payments .options > div:hover {
         border-color: var(--Marine-blue);
+    }
+
+    .container .steps .step-three .services > div:hover {
+        border-color: var(--Purplish-blue);
     }
 }
