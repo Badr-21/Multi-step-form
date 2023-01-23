@@ -1,487 +1,506 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /*## Colors
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*## Colors
     ### Primary*/
-    --Marine-blue: hsl(213, 96%, 18%);
-    --Purplish-blue: hsl(243, 100%, 62%);
-    --Pastel-blue: hsl(228, 100%, 84%);
-    --Light-blue: hsl(206, 94%, 87%);
-    --Strawberry-red: hsl(354, 84%, 57%);
-    /*### Neutral*/
-    --Cool-gray: hsl(231, 11%, 63%);
-    --Light-gray: hsl(229, 24%, 87%);
-    --Magnolia: hsl(217, 100%, 97%);
-    --Alabaster: hsl(231, 100%, 99%);
-    --White: hsl(0, 0%, 100%);
+  --Marine-blue: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --Light-blue: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
+  /*### Neutral*/
+  --Cool-gray: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--Magnolia);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Magnolia);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container .steps .step-two,
 .container .steps .step-three,
 .container .steps .step-four,
-.container .thank-you{
-    display: none
+.container .thank-you {
+  display: none;
 }
 /*/*/
 
 .container {
-    width: 58rem;
-    height: 34rem;
-    padding: 1rem 5.5rem 1rem 1rem;
-    background-color: var(--White);
-    border-radius: .5rem;
-    display: flex;
+  width: 58rem;
+  height: 34rem;
+  padding: 1rem 5.5rem 1rem 1rem;
+  background-color: var(--White);
+  border-radius: 0.5rem;
+  display: flex;
 }
 
 .container .sidebar {
-    width: 19rem;
-    padding: 2rem 2rem;
-    color: var(--White);
-    background-image: url(assets/images/bg-sidebar-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: 80% 100%;
+  width: 19rem;
+  padding: 2rem 2rem;
+  color: var(--White);
+  background-image: url(assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 80% 100%;
 }
 
 .container .sidebar > div {
-    display: flex;
-    margin-bottom: 2rem;
+  display: flex;
+  margin-bottom: 2rem;
 }
 
 .container .sidebar > div .step-name p {
-    font-size: .65rem;
-    text-transform: uppercase;
-    color: var(--Light-gray);
-    margin-bottom: .2rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--Light-gray);
+  margin-bottom: 0.2rem;
 }
 
 .container .sidebar > div .step-name h3 {
-    font-size: .8rem;
-    font-weight: 500;
-    text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .container .sidebar > div .step-number {
-    width: 1.8rem;
-    height: 1.8rem;
-    margin-right: 1rem;
-    border-radius: 50%;
-    border: 1px solid var(--White);
-    font-size: .8rem;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container .sidebar > div .step-number.active {
-    color: var(--Marine-blue);
-    background-color: var(--Light-blue);
-    border-color: var(--Light-blue);
+  color: var(--Marine-blue);
+  background-color: var(--Light-blue);
+  border-color: var(--Light-blue);
 }
 
 .container .steps {
-    width: calc(100% - 19rem);
-    padding: 2rem 0 0 2rem;
+  width: calc(100% - 19rem);
+  padding: 2rem 0 0 2rem;
 }
 
 .container .steps .step {
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container .steps .step-one {
-    display: flex;
+  display: flex;
 }
 
-/* .container .steps .step-two,
+.container .steps .step-two,
 .container .steps .step-three,
 .container .steps .step-four {
-    display: none;
-}  */
+  display: none;
+}
 
 .container .steps .step .step-heading h2 {
-    font-size: 2rem;
-    color: var(--Marine-blue);
-    margin-bottom: .5rem;
+  font-size: 2rem;
+  color: var(--Marine-blue);
+  margin-bottom: 0.5rem;
 }
 
 .container .steps .step .step-heading p {
-    color: var(--Cool-gray);
+  color: var(--Cool-gray);
 }
 
-.container .steps .step-one  .input-infos {
-    margin-top: -2rem;
+.container .steps .step-one .input-infos {
+  margin-top: -2rem;
 }
 
-.container .steps .step-one  .input-infos > div {
-    margin-bottom: 1.5rem;
+.container .steps .step-one .input-infos > div {
+  margin-bottom: 1.5rem;
 }
 
-.container .steps .step-one .input-infos > div  div {
-    display: flex;
-    justify-content: space-between;
+.container .steps .step-one .input-infos > div div {
+  display: flex;
+  justify-content: space-between;
 }
 
-.container .steps .step-one .input-infos > div  div label {
-    font-size: .8rem;
-    font-weight: 500;
-    color: var(--Marine-blue);
+.container .steps .step-one .input-infos > div div label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--Marine-blue);
 }
 
 .container .steps .step-one .input-infos > div div p {
-    display: none;
-    text-align: right;
-    font-size: .9rem;
-    color: var(--Strawberry-red);
+  display: none;
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--Strawberry-red);
 }
 
 .container .steps .step-one .input-infos > div div p.required {
-    display: block;
+  display: block;
 }
 
-.container .steps .step-one .input-infos > div  input {
-    width: 100%;
-    padding: .8rem;
-    margin-top: .5rem;
-    border-radius: .5rem;
-    outline: none;
-    border: 1px solid var(--Cool-gray);
-    color: var(--Marine-blue);
-    font-size: 1rem;
-    font-weight: 700;
+.container .steps .step-one .input-infos > div input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid var(--Cool-gray);
+  color: var(--Marine-blue);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
-.container .steps .step-one .input-infos > div  input:focus {
-    border-color: var(--Marine-blue);
+.container .steps .step-one .input-infos > div input:focus {
+  border-color: var(--Marine-blue);
 }
 
-.container .steps .step-one .input-infos > div  input::placeholder {
-    font-size: 1rem;
-    font-weight: 500;
+.container .steps .step-one .input-infos > div input::placeholder {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .container .steps .step-one .input-infos > div input.error {
-    border-color: var(--Strawberry-red);
+  border-color: var(--Strawberry-red);
 }
 
 .container .steps .step .back-next-confirm {
-    width: 100%;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .container .steps .step .back-next-confirm {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .container .steps .step.step-one .back-next-confirm {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .container .steps .step .back-next-confirm button.next {
-    padding: .8rem 1.5rem;
-    color: var(--White);
-    font-weight: 500;
-    background-color: var(--Marine-blue);
-    border: none;
-    border-radius: .5rem;
+  padding: 0.8rem 1.5rem;
+  color: var(--White);
+  font-weight: 500;
+  background-color: var(--Marine-blue);
+  border: none;
+  border-radius: 0.5rem;
 }
-
-/* .container .steps .step-one,
-.container .steps .step-three,
-.container .steps .step-four,
-.container .thank-you{
-    display: none
-} */
-
-.container .steps .step-two {
-    display: flex;
-} 
 
 .container .steps .step-two .payments .options {
-    display: flex;
-    column-gap: 1rem;
-    height: 12rem;
+  display: flex;
+  column-gap: 1rem;
+  height: 12rem;
 }
 
-
 .container .steps .step-two .payments .options > div {
-    width: calc(100% - 2rem);
-    height: max-content;
-    padding: 1rem;
-    border: 1px solid var(--Light-gray);
-    border-radius: .5rem;
+  width: calc(100% - 2rem);
+  height: max-content;
+  padding: 1rem;
+  border: 1px solid var(--Light-gray);
+  border-radius: 0.5rem;
 }
 
 .container .steps .step-two .payments .options > div.active {
-    background-color: var(--Alabaster);
-    border-color: var(--Marine-blue);
+  background-color: var(--Alabaster);
+  border-color: var(--Marine-blue);
 }
 
 .container .steps .step-two .payments .options > div img {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .container .steps .step-two .payments .options > div p {
-    margin-bottom: .2rem;
-    font-weight: 500;
-    color: var(--Marine-blue);
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+  color: var(--Marine-blue);
 }
 
 .container .steps .step-two .payments .options > div span {
-    font-weight: 400;
-    font-size: .8rem;
-    color: var(--Cool-gray);
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--Cool-gray);
 }
 
 .container .steps .step-two .payments .options > div p.two-months-free {
-    display: none;
-    margin-top: .3rem;
-    font-weight: 700;
-    font-size: .7rem;
-    color: var(--Marine-blue);
-} 
+  display: none;
+  margin-top: 0.3rem;
+  font-weight: 700;
+  font-size: 0.7rem;
+  color: var(--Marine-blue);
+}
 
 .container .steps .step-two .payments .billing {
-    width: 100%;
-    height: 3rem;
-    font-size: .8rem;
-    font-weight: 700;
-    color: var(--Cool-gray);
-    background-color: var(--Alabaster);
-    border-radius: .5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 1.5rem;
+  width: 100%;
+  height: 3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--Cool-gray);
+  background-color: var(--Alabaster);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
 }
 
 .container .steps .step-two .payments .billing .switch {
-    display: inline-block;
-    width: 2.1rem;
-    height: 1.1rem;
-    background-color: var(--Marine-blue);
-    border-radius: 2rem;
-    position: relative;
+  display: inline-block;
+  width: 2.1rem;
+  height: 1.1rem;
+  background-color: var(--Marine-blue);
+  border-radius: 2rem;
+  position: relative;
 }
 
 .container .steps .step-two .payments .billing .switch input {
-    width: 0;
-    height: 0;
-    opacity: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 .container .steps .step-two .payments .billing .switch .slider {
-    content: "";
-    position: absolute;
-    width: .7rem;
-    height: .7rem;
-    border-radius: 50%;
-    background-color: var(--White);
-    top: 50%;
-    left: .2rem;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-transition: .3s;
-    transition: .3s;
+  content: "";
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background-color: var(--White);
+  top: 50%;
+  left: 0.2rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .container .steps .step-two .payments .billing .switch input:checked + .slider {
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 1.2rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1.2rem;
 }
 
 .container .steps .step-two .back-next-confirm {
-    margin-top: 5.6rem;
+  margin-top: 5.6rem;
 }
 
 .container .steps .step .back-next-confirm p {
-    font-size: .9rem;
-    font-weight: 700;
-    color: var(--Cool-gray);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--Cool-gray);
 }
-
-/* .container .steps .step-one,
-.container .steps .step-two {
-    display: none;
-}
-
-.container .steps .step-three {
-    display: flex;
-} */
 
 .container .steps .step-three .services {
-    margin-top: -2rem;
+  margin-top: -2rem;
 }
 
 .container .steps .step-three .services > div {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    border: .1rem solid var(--Light-gray);;
-    border-radius: .5rem
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  border: 0.1rem solid var(--Light-gray);
+  border-radius: 0.5rem;
 }
 
 .container .steps .step-three .services > div.active {
-    background-color: var(--Alabaster);
-    border-color: var(--Purplish-blue);
+  background-color: var(--Alabaster);
+  border-color: var(--Purplish-blue);
 }
 
 .container .steps .step-three .services > div .checkbox {
-    width: 2rem;
+  width: 2rem;
 }
 
 .container .steps .step-three .services > div .checkbox input {
-    cursor:not-allowed;
+  cursor: not-allowed;
 }
 
 .container .steps .step-three .services > div .service-option {
-    width: calc(100% - 2rem);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: calc(100% - 2rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.container .steps .step-three .services > div .service-option .service-option-name p {
-    margin-bottom: .5rem;
-    font-weight: 700; 
-    color: var(--Marine-blue);
+.container
+  .steps
+  .step-three
+  .services
+  > div
+  .service-option
+  .service-option-name
+  p {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--Marine-blue);
 }
 
-.container .steps .step-three .services > div .service-option .service-option-name span {
-    font-size: .8rem;
-    font-weight: 500; 
-    color: var(--Cool-gray);
+.container
+  .steps
+  .step-three
+  .services
+  > div
+  .service-option
+  .service-option-name
+  span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--Cool-gray);
 }
 
 .container .steps .step-three .services > div .service-option .plus-per-month {
-    font-size: .8rem;
-    font-weight: 500;
-    color: var(--Purplish-blue);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--Purplish-blue);
 }
 
-/* .container .steps .step-one,
-.container .steps .step-two, 
-.container .steps .step-three{
-    display: none;
-} */
-
-.container .steps .step-four {
-    display: flex;
-}
 .container .steps .step-four .back-next-confirm button.confirm {
-    padding: .8rem 1.5rem;
-    color: var(--White);
-    font-weight: 500;
-    background-color: var(--Purplish-blue);
-    border: none;
-    border-radius: .5rem;
+  padding: 0.8rem 1.5rem;
+  color: var(--White);
+  font-weight: 500;
+  background-color: var(--Purplish-blue);
+  border: none;
+  border-radius: 0.5rem;
 }
 
 .container .step-four .dynamic-sec {
-    padding: 1rem 1.2rem 0;
-    margin-top: -4rem;
-    background-color: var(--Magnolia);
+  padding: 1rem 1.2rem 0;
+  margin-top: -4rem;
+  background-color: var(--Magnolia);
 }
 
 .container .step-four .dynamic-sec .option-choices {
-    padding-bottom: 1.5rem;
-    border-bottom: .1rem solid var(--Light-gray);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.1rem solid var(--Light-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container .step-four .dynamic-sec .option-choice-change {
-    display: flex;
-    flex-direction: column;
-    row-gap: .4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+}
+
+.container .step-four .dynamic-sec .option-choice-change .option-choice {
+  color: var(--Marine-blue);
+  font-weight: 700;
 }
 
 .container .step-four .dynamic-sec .option-choice-change .change {
-    text-decoration: underline;
+  text-decoration: underline;
+  color: var(--Purplish-blue);
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.container .step-four .dynamic-sec .option-choices .option-money {
+  font-weight: 700;
+  color: var(--Marine-blue);
 }
 
 .container .step-four .dynamic-sec .services-choice {
-    margin: 1.5rem 0;
-    display: flex;
-    justify-content: space-between;
+  margin: 1.5rem 0;
+  display: none;
+  justify-content: space-between;
+}
+
+.container .step-four .dynamic-sec .services-choice > p:first-child {
+  font-size: 0.9rem;
+  color: var(--Cool-gray);
+}
+
+.container .step-four .dynamic-sec .services-choice > p:last-child {
+  font-size: 0.9rem;
+  color: var(--Marine-blue);
 }
 
 .container .step-four .total {
-    margin-top: -4rem;
-    display: flex;
-    justify-content: space-between;
+  padding: 0 1rem;
+  margin-top: -4rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* .container .steps {
-    display: none;
-} */
+.container .step-four .total > p:first-child {
+  font-size: 0.9rem;
+  color: var(--Cool-gray);
+}
+
+.container .step-four .total > p:last-child {
+  color: var(--Purplish-blue);
+  font-weight: 700;
+}
 
 .container .thank-you {
-    width: calc(100% - 19rem);
-    padding: 2rem 0 0 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: calc(100% - 19rem);
+  padding: 2rem 0 0 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container .thank-you h2 {
-    font-size: 2rem;
-    color: var(--Marine-blue);
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--Marine-blue);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .container .thank-you p {
-    font-size: 1.1rem;
-    color: var(--Cool-gray);
-    text-align: center;
-    line-height: 1.4;
+  font-size: 1.1rem;
+  color: var(--Cool-gray);
+  text-align: center;
+  line-height: 1.4;
 }
 
-.container .thank-you,
+/* .container .thank-you,
 .container .steps .step-one,
 .container .steps .step-two,
 .container .steps .step-three {
-    display: none;
+  display: none;
 }
-
 
 .container .steps .step-four {
-    display: flex;
-}
-
+  display: flex;
+} */
 
 @media (hover: hover) {
-    .container .steps .step-one .input-infos > div  input:hover,
-    .container .steps .step .back-next-confirm button.next:hover,
-    .container .steps .step .back-next-confirm p:hover,
-    .container .steps .step-two .payments .options > div:hover,
-    .container .steps .step-three .services > div:hover {
-        cursor: pointer;
-    }
+  .container .steps .step-one .input-infos > div input:hover,
+  .container .steps .step .back-next-confirm button.next:hover,
+  .container .steps .step .back-next-confirm p:hover,
+  .container .steps .step-two .payments .options > div:hover,
+  .container .steps .step-three .services > div:hover,
+  .container .step-four .dynamic-sec .option-choice-change .change:hover {
+    cursor: pointer;
+  }
 
-    .container .steps .step-two .payments .options > div:hover {
-        border-color: var(--Marine-blue);
-    }
+  .container .steps .step-two .payments .options > div:hover {
+    border-color: var(--Marine-blue);
+  }
 
-    .container .steps .step-three .services > div:hover {
-        border-color: var(--Purplish-blue);
-    }
+  .container .steps .step-three .services > div:hover {
+    border-color: var(--Purplish-blue);
+  }
+
+  .container .step-four .dynamic-sec .option-choice-change .change:hover {
+    opacity: 1;
+  }
 }

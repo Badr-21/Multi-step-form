@@ -1,226 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Multi-step form</title>
-</head>
-<body>
-  <main class="container">
-        <!-- Sidebar start -->
-    <section class="sidebar">
-    <div class="your-info">
-      <div class="step-number active">1</div>
-      <div class="step-name">
-        <p>Step 1</p>
-        <h3>Your info</h3> 
-      </div>   
-    </div>
-    <div class="select-plan">
-      <div class="step-number">2</div>
-      <div class="step-name">
-        <p>Step 2</p>
-        <h3>Select plan</h3> 
-      </div>   
-    </div>
-    <div class="add-on">
-      <div class="step-number">3</div>
-      <div class="step-name">
-        <p>Step 3</p>
-        <h3>Add-ons</h3> 
-      </div>   
-    </div>
-    <div class="summary">
-      <div class="step-number">4</div>
-      <div class="step-name">
-        <p>Step 4</p>
-        <h3>Summary</h3> 
-      </div>   
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- Sidebar start -->
+      <section class="sidebar">
+        <div class="your-info">
+          <div class="step-number active">1</div>
+          <div class="step-name">
+            <p>Step 1</p>
+            <h3>Your info</h3>
+          </div>
+        </div>
+        <div class="select-plan">
+          <div class="step-number">2</div>
+          <div class="step-name">
+            <p>Step 2</p>
+            <h3>Select plan</h3>
+          </div>
+        </div>
+        <div class="add-on">
+          <div class="step-number">3</div>
+          <div class="step-name">
+            <p>Step 3</p>
+            <h3>Add-ons</h3>
+          </div>
+        </div>
+        <div class="summary">
+          <div class="step-number">4</div>
+          <div class="step-name">
+            <p>Step 4</p>
+            <h3>Summary</h3>
+          </div>
+        </div>
         <!-- Sidebar end -->
-  </section>
-  <section class="steps">
+      </section>
+      <section class="steps">
         <!-- Step 1 start -->
-    <div class="step step-one">
-      <div class="step-heading">
-        <h2>Personal info</h2>
-        <p>Please provide your name, email address, and phone number.</p>
-      </div>
-      <div class="input-infos">
-        <div class="name">
-          <div class="name-text">
-            <label for="name">Name</label>
-            <p id="required">This field is required</p>
+        <div class="step step-one">
+          <div class="step-heading">
+            <h2>Personal info</h2>
+            <p>Please provide your name, email address, and phone number.</p>
           </div>
-          <input id="name" type="text" name="name" placeholder="e.g. Stephen King">
-        </div>
-        <div class="email">
-          <div class="email-text">
-            <label>Email Address</label>
-            <p id="required">This field is required</p>
+          <div class="input-infos">
+            <div class="name">
+              <div class="name-text">
+                <label for="name">Name</label>
+                <p id="required">This field is required</p>
+              </div>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="e.g. Stephen King"
+              />
+            </div>
+            <div class="email">
+              <div class="email-text">
+                <label>Email Address</label>
+                <p id="required">This field is required</p>
+              </div>
+              <input
+                id="email"
+                type="text"
+                name="email"
+                placeholder="e.g. stephenking@lorem.com"
+              />
+            </div>
+            <div class="phone-number">
+              <div class="phone-number-text">
+                <label>Phone Number</label>
+                <p id="required">This field is required</p>
+              </div>
+              <input
+                id="phone"
+                type="text"
+                name="phone"
+                placeholder="e.g. +1 234 567 890"
+              />
+            </div>
           </div>
-          <input id="email" type="text" name="email" placeholder="e.g. stephenking@lorem.com">
-        </div>
-        <div class="phone-number">
-          <div class="phone-number-text">
-            <label>Phone Number</label>
-            <p id="required">This field is required</p>
+          <div class="back-next-confirm">
+            <button class="next" id="next-step-one">Next Step</button>
           </div>
-          <input id="phone" type="text" name="phone" placeholder="e.g. +1 234 567 890">
         </div>
-      </div>
-      <div class="back-next-confirm">
-        <button class="next" id="next-step-one">Next Step</button>
-      </div>
-    </div>
         <!-- Step 1 end -->
         <!-- Step 2 start -->
-    <div class="step step-two">
-      <div class="step-heading">
-        <h2>Select your plan</h2>
-        <p>You have the option of monthly or yearly billing.</p>
-      </div>
-      <div class="payments">
-        <div class="options">
-          <div class="arcade active">
-            <img src="assets/images/icon-arcade.svg" alt="icon arcade">
-            <p>Arcade</p>
-            <span>$<span class="money">9</span>/mo</span>
-            <p class="two-months-free">2 months free</p>
+        <div class="step step-two">
+          <div class="step-heading">
+            <h2>Select your plan</h2>
+            <p>You have the option of monthly or yearly billing.</p>
           </div>
-          <div class="advanced">
-            <img src="assets/images/icon-advanced.svg" alt="icon advanced">
-            <p>Advanced</p>
-            <span>$<span class="money">12</span>/mo</span>
-            <p class="two-months-free">2 months free</p>
+          <div class="payments">
+            <div class="options">
+              <div class="arcade active">
+                <img src="assets/images/icon-arcade.svg" alt="icon arcade" />
+                <p>Arcade</p>
+                <span>$<span class="money-option">9</span>/<span class="mo-or-yr">mo</span></span>
+                <p class="two-months-free">2 months free</p>
+              </div>
+              <div class="advanced">
+                <img
+                  src="assets/images/icon-advanced.svg"
+                  alt="icon advanced"
+                />
+                <p>Advanced</p>
+                <span>$<span class="money-option">12</span>/<span class="mo-or-yr">mo</span></span>
+                <p class="two-months-free">2 months free</p>
+              </div>
+              <div class="pro">
+                <img src="assets/images/icon-pro.svg" alt="icon pro" />
+                <p>Pro</p>
+                <span>$<span class="money-option">15</span>/<span class="mo-or-yr">mo</span></span>
+                <p class="two-months-free">2 months free</p>
+              </div>
+            </div>
+            <div class="billing">
+              <p>Monthly</p>
+              <label class="switch">
+                <input class="toggle" type="checkbox" />
+                <span class="slider"></span>
+              </label>
+              <p>Yearly</p>
+            </div>
           </div>
-          <div class="pro">
-            <img src="assets/images/icon-pro.svg" alt="icon pro">
-            <p>Pro</p>
-            <span>$<span class="money">15</span>/mo</span>
-            <p class="two-months-free">2 months free</p>
+          <div class="back-next-confirm">
+            <p class="go-back" id="go-back-step-two">Go Back</p>
+            <button class="next" id="next-step-two">Next Step</button>
           </div>
         </div>
-        <div class="billing">
-          <p>Monthly</p>
-          <label class="switch">
-            <input class="toggle" type="checkbox">
-            <span class="slider"></span>
-          </label>
-          <p>Yearly</p>
-        </div>
-      </div>
-      <div class="back-next-confirm">
-        <p class="go-back" id="go-back-step-two">Go Back</p>
-        <button class="next" id="next-step-two">Next Step</button>
-      </div>
-    </div>
         <!-- Step 2 end -->
         <!-- Step 3 start -->
-    <div class="step step-three">
-      <div class="step-heading">
-        <h2>Pick add-ons</h2>
-        <p>Add-ons help enhance your gaming experience.</p>
-      </div>
-      <div class="services">
-        <div class="online-service active">
-          <div class="checkbox">
-            <input type="checkbox" checked>
+        <div class="step step-three">
+          <div class="step-heading">
+            <h2>Pick add-ons</h2>
+            <p>Add-ons help enhance your gaming experience.</p>
           </div>
-          <div class="service-option">
-            <div class="service-option-name">
-              <p>Online service</p>
-              <span>Access to multiplayer games</span>
+          <div class="services">
+            <div class="online-service active">
+              <div class="checkbox">
+                <input type="checkbox" checked />
+              </div>
+              <div class="service-option">
+                <div class="service-option-name">
+                  <p>Online service</p>
+                  <span>Access to multiplayer games</span>
+                </div>
+                <p class="plus-per-month">+$<span class="money-service">1</span>/<span class="mo-or-yr">mo</span></p>
+              </div>
             </div>
-            <p class="plus-per-month">+$1/mo</p>
+            <div class="larger-storage active">
+              <div class="checkbox">
+                <input type="checkbox" checked />
+              </div>
+              <div class="service-option">
+                <div class="service-option-name">
+                  <p>Larger storage</p>
+                  <span>Extra 1TB of cloud save</span>
+                </div>
+                <p class="plus-per-month">+$<span class="money-service">2</span>/<span class="mo-or-yr">mo</span></p>
+              </div>
+            </div>
+            <div class="customizable-profile">
+              <div class="checkbox">
+                <input type="checkbox" />
+              </div>
+              <div class="service-option">
+                <div class="service-option-name">
+                  <p>Customizable Profile</p>
+                  <span>Custom theme on your profile</span>
+                </div>
+                <p class="plus-per-month">+$<span class="money-service">1</span>/<span class="mo-or-yr">mo</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="back-next-confirm">
+            <p class="go-back" id="go-back-step-three">Go Back</p>
+            <button class="next" id="next-step-three">Next Step</button>
           </div>
         </div>
-        <div class="larger-storage active">
-          <div class="checkbox">
-            <input type="checkbox" checked>
-          </div>
-          <div class="service-option">
-            <div class="service-option-name">
-              <p>Larger storage</p>
-              <span>Extra 1TB of cloud save</span>
-            </div>
-            <p class="plus-per-month">+$2/mo</p>
-          </div>
-        </div>
-        <div class="customizable-profile">
-          <div class="checkbox">
-            <input type="checkbox">
-          </div>
-          <div class="service-option">
-            <div class="service-option-name">
-              <p>Customizable Profile</p>
-              <span>Custom theme on your profile</span>
-            </div>
-            <p class="plus-per-month">+$1/mo</p>
-          </div>
-        </div>
-      </div>
-      <div class="back-next-confirm">
-        <p class="go-back" id="go-back-step-three">Go Back</p>
-        <button class="next" id="next-step-three">Next Step</button>
-      </div>
-    </div>
         <!-- Step 3 end -->
         <!-- Step 4 start -->
-    <div class="step step-four">
-      <div class="step-heading">
-        <h2>Finishing up</h2>
-        <p>Double-check everything looks OK before confirming.</p>
-      </div>
-      <div class="dynamic-sec">
-        <div class="option-choices">
-          <div class="option-choice-change">
-            <div class="option-choice">Arcade(Monthly)</div>
-            <p class="change">Change</p>
+        <div class="step step-four">
+          <div class="step-heading">
+            <h2>Finishing up</h2>
+            <p>Double-check everything looks OK before confirming.</p>
           </div>
-          <div class="option-money">
-            <p>$<span>9</span>/<span></span class="mo-or-yr">mo</p>
+          <div class="dynamic-sec">
+            <div class="option-choices">
+              <div class="option-choice-change">
+                <div class="option-choice">Arcade (Monthly)</div>
+                <p class="change">Change</p>
+              </div>
+              <div class="option-money">
+                <p>$9/mo</p>
+              </div>
+            </div>
+            <div class="services-choice">
+              <p>Online service</p>
+              <p>+$<span class="money-service">1</span>/<span class="mo-or-yr">mo</span></p>
+            </div>
+            <div class="services-choice">
+              <p>Larger storage</p>
+              <p>+$<span class="money-service">2</span>/<span class="mo-or-yr">mo</span></p>
+            </div>
+            <div class="services-choice">
+              <p>Customizable Profile</p>
+              <p>+$<span class="money-service">1</span>/<span class="mo-or-yr">mo</span></p>
+            </div>
           </div>
-        </div>
-        <div class="services-choice">
-          <p>Online service</p>
-          <p>+$<span>1</span>/<span class="mo-or-yr">mo</span></p>
-        </div>
-        <div class="services-choice">
-          <p>Larger storage</p>
-          <p>+$<span>2</span>/<span class="mo-or-yr">mo</span></p>
-        </div>
-      </div>
-      <!-- Dynamically add subscription and add-on selections here -->
-      <div class="total">
-        <p>Total (per <span class="total-month-or-year">month</span>)</p>
-        <p>+$<span class="total-money">12</span>/<span class="mo-or-yr">mo</span></p>
-      </div>
+          <!-- Dynamically add subscription and add-on selections here -->
+          <div class="total">
+            <p>Total (per month)</p>
+            <p>$<span class="total-money-service">12</span>/<span class="mo-or-yr">mo</span></span>
+            </p>
+          </div>
 
-      <div class="back-next-confirm">
-        <p class="go-back" id="go-back-step-four">Go Back</p>
-        <button class="confirm" id="confirm">Confirm</button>
-      </div>
-    </div>
-  </section>
-        <!-- Step 4 end -->
+          <div class="back-next-confirm">
+            <p class="go-back" id="go-back-step-four">Go Back</p>
+            <button class="confirm" id="confirm">Confirm</button>
+          </div>
+        </div>
+      </section>
+      <!-- Step 4 end -->
       <!-- Step 5 start -->
-  <section class="thank-you">
-    <img src="assets/images/icon-thank-you.svg" alt="icon thank you">
-      <h2>Thank you!</h2>
-      <p>
-        Thanks for confirming your subscription! We hope you have fun 
-        using our platform. If you ever need support, please feel free 
-        to email us at support@loremgaming.com.
-      </p>
-      <!-- Step 5 end -->
-  </section>
-  </main>
-  <script src="script.js"></script>
-</body>
+      <section class="thank-you">
+        <img src="assets/images/icon-thank-you.svg" alt="icon thank you" />
+        <h2>Thank you!</h2>
+        <p>
+          Thanks for confirming your subscription! We hope you have fun using
+          our platform. If you ever need support, please feel free to email us
+          at support@loremgaming.com.
+        </p>
+        <!-- Step 5 end -->
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
